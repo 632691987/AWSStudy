@@ -1,0 +1,21 @@
+Cli 
+
+Access key ID  : AKIATMCSACZ33RUKPEUK
+Access key PSWD: o1Pv62LhvkKM07HZ64iW6rFZXwvwCqPOtVrZYDCf
+
+eu-west-3
+
+==========================================================================
+
+install CLI: https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
+Configure  : https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html
+
+
+==========================================================================
+aws configure --profile admincli
+
+==========================================================================
+
+Relative commands:
+aws configure list --profile admincli
+aws configure list-profiles

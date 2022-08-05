@@ -1,0 +1,14 @@
+Internet Gateway
+An Internet Gateway (IGW) is a logical connection between an Amazon VPC and the Internet. 
+It is not a physical device. Only one can be associated with each VPC. 
+It does not limit the bandwidth of Internet connectivity. 
+(The only limitation on bandwidth is the size of the Amazon EC2 instance, 
+and it applies to all traffic — internal to the VPC and out to the Internet.)
+
+If a VPC does not have an Internet Gateway, then the resources in the VPC cannot be accessed from the Internet (unless the traffic flows via a corporate network and VPN/Direct Connect).
+
+An Internet Gateway allows resources within your VPC to access the internet, and vice versa. In order for this to happen, there needs to be a routing table entry allowing a subnet to access the IGW.
+
+That is to say — an IGW allows resources within your public subnet to access the internet, and the internet to access said resources.
+
+A subnet is deemed to be a Public Subnet if it has a Route Table that directs traffic to the Internet Gateway.

@@ -1,0 +1,20 @@
+A NAT Gateway does something similar, but with two main differences:
+
+1, It allows resources in a private subnet to access the internet (think yum updates, external database connections, wget calls, OS patch, etc).
+2, It only works one way. The internet at large cannot get through your NAT to your private resources unless you explicitly allow it.
+
+
+AWS introduced a NAT Gateway Service that can take the place of a NAT Instance. The benefits of using a NAT Gateway service are:
+
+1, It is a fully-managed service — just create it and it works automatically, including fail-over.
+2, A NAT gateway supports 5 Gbps of bandwidth and automatically scales up to 45 Gbps. (a NAT Instance is limited to the bandwidth associated with the EC2 instance type).
+
+
+
+
+
+
+However:
+
+1, Security Groups cannot be associated with a NAT Gateway.
+2, You’ll need one in each AZ (for high availability), since they only operate in a single AZ.
